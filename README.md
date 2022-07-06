@@ -1,1 +1,1 @@
-alx C frunctions and nested loops project
+alx C functions and nested loops project
