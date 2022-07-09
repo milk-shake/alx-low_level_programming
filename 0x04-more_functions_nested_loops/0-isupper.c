@@ -2,11 +2,10 @@
 #include <stdio.h>
 
 /**
- * _isupper - checks for uppercase character
+ * _isupper - function to checks for uppercase character
  * @c:is the character that will use for the aurgument of the
  * function
- *
- * Return : 1
+ * Return: 0
  */
 int _isupper(int c)
 {
@@ -17,6 +16,6 @@ int _isupper(int c)
 	}
 	else
 		return (0);
-	printf("\n");
+	putchar('\n');
 }
 
