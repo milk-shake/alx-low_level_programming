@@ -8,10 +8,7 @@
  */
 int _strlen(char *s)
 {
-	int len;
-
 	 s = "My first strlen!";
-	 len = _strlen(s);
-	 _putchar(len);
+	 _strlen(s);
 	return (0);
 }
