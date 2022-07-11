@@ -8,11 +8,8 @@
  */
 void rev_string(char *s)
 {
-	char b[10] = "My School";
+	 char b[10] = "My School";
 
-	s = b;
-	_puts(s);
-	rev_string(b);
-	_puts(b);
-
+	 s = b;
+	 rev_string(s);
 }
