@@ -17,4 +17,5 @@ void print_rev(char *s)
 		*r_ptr-- = *s;
 		*s++ = tmp;
 	}
+	_putchar('\n');
 }
