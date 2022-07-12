@@ -8,8 +8,14 @@
  */
 void rev_string(char *s)
 {
-	 char b[10] = "My School";
+	char *r_ptr = s;
 
-	 s = b;
-	 rev_string(s);
+	while (*(r_ptr + 1) != '\0')
+		r_ptr++;
+	while (r_ptr > s)
+	{
+		char tmp = *r_ptr;
+		*r_ptr-- = *s;
+		*s++ = tmp;
+	}
 }
