@@ -7,16 +7,8 @@
  */
 void print_rev(char *s)
 {
-	char *r_ptr = s;
+	int i = 0;
 
-	while (*(r_ptr + 1) != '\0')
-		r_ptr++;
-	while (r_ptr > s)
-	{
-		char tmp = *r_ptr;
-		*r_ptr-- = *s;
-		*s++ = tmp;
-	}
-	_putchar('\n');
+	while (*(s + i) != '\0')
+		i++;
 }
-
