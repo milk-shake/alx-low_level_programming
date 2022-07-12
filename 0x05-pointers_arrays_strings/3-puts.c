@@ -13,7 +13,7 @@ void _puts(char *str)
 		putchar(*str);
 		str++;
 	}
-	_putcha('\n');
+	_putchar('\n');
 }
 
 
