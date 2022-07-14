@@ -12,9 +12,12 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	char *result = malloc(strlen(dest) + strlen(src) + 1);
+	char  *ptr = dest + strlen(dest);
 
-	strcpy(result, dest);
-	_strcat(result, src);
-	return (result);
+	while (*src != '\0')
+	{
+		*ptr++ = *src++;
+	}
+	*ptr = '\0';
+	return (dest);
 }
