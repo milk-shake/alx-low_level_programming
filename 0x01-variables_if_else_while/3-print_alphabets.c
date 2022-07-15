@@ -2,7 +2,7 @@
 /**
  * main - entry point
  *
- * Retyrn:0.
+ * Return:0.
  */
 int main(void)
 {
@@ -10,9 +10,8 @@ int main(void)
 	char A;
 
 	for (a = 'a'; a <= 'z'; a++)
-		putchar(a);
 	for (a = 'A'; A <= 'Z'; A++)
-		putchar(A);
+		putchar(a,A);
 	putchar('\n');
 	return (0);
 }
