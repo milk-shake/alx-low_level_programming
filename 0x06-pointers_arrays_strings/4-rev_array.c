@@ -1,21 +1,20 @@
 #include "main.h"
-#define MAX_SIZE 100
+
 /**
- * reverse_array - function that reverses the content of an array of integers.
- * @a: character pointer
- * @n: size of array
- * Return: 0.
+ * reverse_array - a function that reverse an array.
+ * @a: an input array
+ * @n: number of elements of array
+ * Return: Nothing
  */
 void reverse_array(int *a, int n)
 {
-	int *first = a;
-	int *last = a + n - 1;
+	int i = 0;
+	int aux;
 
-	while (first < last)
+	while (i < n--)
 	{
-		int temp = *first;
-		*last = temp;
-		first++;
-		last--;
+		aux = a[i];
+		a[i++] = a[n];
+		a[n] = aux;
 	}
 }
