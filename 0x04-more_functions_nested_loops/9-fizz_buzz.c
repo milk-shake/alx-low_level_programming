@@ -1,27 +1,26 @@
 #include "main.h"
-#include<stdio.h>
+#include <stdio.h>
+
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * main - Entry piont
+ * Return: Always 0
  */
 int main(void)
 {
-	int i;
+	int i = 1;
 
-	for (i = 1; i <= 100; i++)
+	for (; i < 100 ; i++)
 	{
-		if (i % 15 == 0)
-		{
-			printf("FizBuzz\n");
-		}
-	       else if (i % 3 == 0)
-				printf("Fizz\n");
-	       else if (i % 5 == 0);
-				printf("Buzz\n");
-	else
-		printf("%d\n", i);
+		if (i % 3 == 0 && i % 5 == 0)
+			printf("FizzBuzz ");
+		else if (i % 3 == 0)
+			printf("Fizz ");
+		else if (i % 5 == 0)
+			printf("Buzz ");
+		else
+			printf("%d ", i);
 	}
-       	return 0;
+	printf("Buzz\n");
 
+	return (0);
 }
