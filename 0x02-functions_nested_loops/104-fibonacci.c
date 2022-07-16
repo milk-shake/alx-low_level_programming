@@ -1,28 +1,32 @@
 #include <stdio.h>
-
 /**
  * main - Entry point
  *
- * Return: Always 0 (Success)
+ * Description: program that finds and prints the first 98 Fibonacci
+ *              numbers, starting with 1 and 2
+ *
+ * Return: Always 0 successful
  */
-
 int main(void)
 {
-	int i;
-	long int fibonacci[98];
+        unsigned long int t0 = 0, t1 = 1, s;
 
-	fibonacci[0] = 1;
-	fibonacci[1] = 2;
-	printf("%ld, %ld, ", fibonacci[0], fibonacci[1]);
+        int i;
 
-	for (i = 2; i < 98; i++)
-	{
-		fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
-		if (i == 97)
-			printf("%ld\n", fibonacci[i]);
-		else
-			printf("%ld, ", fibonacci[i]);
-	}
+        for (i = 1; i<= 98; i++)
+        {
+                s = t0 + t1;
 
-	return (0);
+                if (i != 98)
+                {
+                        printf("%lu, ", s);
+                }
+                else
+                {
+                        printf("%lu\n", s);
+                }
+                t0 = t1;
+                t1 = s;
+        }
+        return (0);
 }
