@@ -1,29 +1,26 @@
 #include <stdio.h>
+
 /**
  * main - Entry point
  *
- * Return:0
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-        unsigned long int t0 = 0, t1 = 1, s;
+	int i;
+	long int fibonacci[50], sum = 2;
 
-        int i;
+	fibonacci[0] = 1;
+	fibonacci[1] = 2;
 
-        for (i = 1; i<= 98; i++)
-        {
-                s = t0 + t1;
+	for (i = 2; i < 50; i++)
+	{
+		fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+		if ((fibonacci[i] % 2) == 0 && fibonacci[i] < 4000000)
+			sum += fibonacci[i];
+	}
+	printf("%ld\n", sum);
 
-                if (i != 98)
-                {
-                        printf("%lu, ", s);
-                }
-                else
-                {
-                        printf("%lu\n", s);
-                }
-                t0 = t1;
-                t1 = s;
-        }
-        return (0);
+	return (0);
 }
