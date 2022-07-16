@@ -1,22 +1,24 @@
 #include "main.h"
-#include<stdio.h>
+
 /**
- * print_square - prints a square, followed by a new line.
- *@size: is the int that will use for the argument of the function
- * Return: 0
- *
+ * print_square - Write a function that prints a square,
+ * followed by a new line.
+ * @size: An input integer
+ * Return: Always 0
  */
 void print_square(int size)
 {
 	int i, j;
 
-	for (i = 0; i < size; i++)
+	if (size > 0)
 	{
-		for (j = 0; j < size; j++)
+		for (i = 0; i < size; i++)
 		{
-			putchar('#');
-			print_square(size);
+			for (j = 0; j < size; j++)
+				_putchar('#');
+			_putchar('\n');
 		}
-		 putchar('\n');
 	}
+	else
+		_putchar('\n');
 }
