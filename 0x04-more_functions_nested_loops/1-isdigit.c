@@ -1,23 +1,23 @@
-#include "main.h"
-#include <stdio.h>
+#include "holberton.h"
 
 /**
- * _isdigit - takes a single argument in the form
- *
- * of an integer and returns the value of type int
- * @c : is the int that will use for the argument of the function
- * Return: the value of type int
+ * _isdigit - A function that checks for a digit (0 through 9).
+ * @c: An input integer
+ * Return: 1 if c is a digit or 0 otherwise
  */
 int _isdigit(int c)
 {
+	char i = '0';
+	int isdigit = 0;
 
-	if (c <= 9)
+	for (; i <= '9'; i++)
 	{
-	return (1);
+		if (i == c)
+		{
+			isdigit = 1;
+			break;
+		}
 	}
-	else
-		return (0);
-	putchar('\n');
+
+	return (isdigit);
 }
-
-
