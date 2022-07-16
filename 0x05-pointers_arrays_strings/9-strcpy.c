@@ -11,9 +11,18 @@
  */
 char *_strcpy(char *dest, char *src)
 {
+	if (dest == NULL)
+	{
+		return NULL;
+	}
 	char *aux = dest;
 
-	while (*src)
-		*dest++ = *src++;
+	while (*src != '\0')
+	{
+		*dest = *src;
+		dest++
+		src++;
+	}
+		*dest = '\0';
 	return (aux);
 }
