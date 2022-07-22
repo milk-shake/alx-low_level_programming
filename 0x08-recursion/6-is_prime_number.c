@@ -1,20 +1,33 @@
 #include "main.h"
+#include <stddef.h>
+
 /**
- * is_prime_number - states if a number is a prime number
- * @n: number to check
+ * do_is_prime_number - recursively determine if n > 2 is prime
+ * @n: the number to determine primality
+ * @m: the recursive iterator searching for success value
  *
- * Return: 1 if prime , 0 if not
+ * Return: 1 if prime, 0 if composite
+ */
+int do_is_prime_number(int n, int m)
+{
+	if (m >= n / 2)
+		return (1);
+	if (n % m)
+		return (do_is_prime_number(n, m + 2));
+	return (0);
+}
+
+/**
+ * is_prime_number - determines if a number is prime
+ * @n: the number to check
+ *
+ * Return: 1 is prime, 0 if composite
  */
 int is_prime_number(int n)
 {
-	int a = 0;
-	int b = 0;
-
-	if (a < 2 || a % b == 0)
-		return (0);
-	if (b > a / 2)
-		return (1);
 	if (n == 2)
 		return (1);
-	return (is_prime_number(n));
+	if (n < 2 || !(n % 2))
+		return (0);
+	return (do_is_prime_number(n, 3));
 }
