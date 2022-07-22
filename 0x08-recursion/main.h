@@ -10,3 +10,6 @@ int is_palindrome(char *s);
 int wildcmp(char *s1, char *s2);
 void _putchar(char c);
 int _strlen(char *str);
+char *move_past_star(char *s2);
+int inception(char *s1, char *s2);
+
