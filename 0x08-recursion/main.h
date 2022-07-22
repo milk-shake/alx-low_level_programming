@@ -12,4 +12,5 @@ void _putchar(char c);
 int _strlen(char *str);
 char *move_past_star(char *s2);
 int inception(char *s1, char *s2);
-
+int _strlen(char *s);
+int do_is_palindrome(char *s, int l, int i);
