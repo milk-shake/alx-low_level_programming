@@ -5,16 +5,14 @@
  * @argv: argument vector of pointers to strings
  * Return: always 0
  */
-int main (int argc,  char *argv[])
+int main (int argc, __attribute__((unused))  char *argv[])
 {
 	int i;
-
-	printf("argc %d\n",argc);
-	printf("contents of argv[]\n");
-
+	
 	for (i = 0; i < argc; i++)
 	{
-		printf("argv[%d] = %s\n", i, argv[i]);
 	}
+	printf("%d\n", i - 1);
 	return (0);
 }
+
