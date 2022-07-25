@@ -1,18 +1,16 @@
 #include <stdio.h>
-/**
- * main - Entry Point
- * @argc: arguments
- * @argv: array pointing to arguments
- * Return: 0
- */
-int main(int argc, char *argv[])
-{
-	int i = 0;
 
-	while (i < argc)
+/**
+ * main - A program that prints all arguements it receives
+ * @argc: The arguement counter
+ * @argv: The arguement values
+ * Return: Always 0 (Success)
+ */
+int main(int argc, char **argv)
+{
+	while (argc--)
 	{
-		printf("%s\n", argv[i]);
-		i++;
+		printf("%s\n", *argv++);
 	}
 	return (0);
 }
