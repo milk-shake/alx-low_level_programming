@@ -1,29 +1,30 @@
 #include <stdio.h>
 #include <stdlib.h>
-/**
- * main - entry point
- * atoi function that converts a string to an int
- * @argc: arguments
- * @argv: array pointing to aurguments
- * Return: 0
- */
-int main(int argc, char *argv[])
-{
-	int i;
-	int sum = 0;
+#include <ctype.h>
 
-	if (argc < 1)
-		return (0);
-	
-	for (i = 1; i < argc; i++)
+/**
+ * main - A program that adds positive numbers
+ * @argc: The arguments' counter
+ * @argv: The argument's values
+ * Return: Always 0 (Success)
+ */
+int main(int argc, char **argv)
+{
+	int num, result = 0, i;
+
+	while (argc-- > 1)
 	{
-		if (!atoi(argv[i]))
+		for (i = 0; argv[argc][i]; i++)
 		{
-			printf("%s\n", "Error");
-			return (1);
+			if (!(isdigit(argv[argc][i])))
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		sum += atoi(argv[i]);
+		num = atoi(argv[argc]);
+		result += num;
 	}
-		printf("sum = %d\n", sum);
-		return (0);
+	printf("%d\n", result);
+	return (0);
 }
