@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include<limits.h>
 /**
  * array_range - function that creates an array of integers.
  * @min: first int
@@ -18,7 +19,7 @@ int *array_range(int min, int max)
 	if (p == NULL)
 		return (NULL);
 	for (i = 0; i <= (nmemb * size); i++)
-		p[min] = INT_MIN;
-		p[max] = INT_MAX;
-	return(p);
+	p[min] = INT_MIN;
+	p[max] = INT_MAX;
+	return (p);
 }
