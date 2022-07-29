@@ -1,29 +1,41 @@
 #include<stdio.h>
-#include<stdlib.h>
 #include "main.h"
+#include <stdlib.h>
+
 /**
- * str_concat - concantenates two strings
+ * str_concat - concatenates two strings
  * @s1: first string
  * @s2: second string
- * Return:pointer to newly allocated space in memory
- * NULL on failure
  *
- *
+ * Return: pointer to newly allocated space in memory, or NULL if error
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *ptr;
+	unsigned int i, j, k, l;
+	char *s;
 
 	if (s1 == NULL)
-		return (NULL);
-	ptr = (char *)malloc(sizeof(char));
-
-	if (ptr == NULL)
-		return (NULL);
-	while (*s1 != '\0')
+		i = 0;
+	else
 	{
-		*ptr++ = *s1++;
+		for (i = 0; s1[i]; i++)
+			;
 	}
-	*ptr = '\0';
-	return (s2);
+	if (s2 == NULL)
+		j = 0;
+	else
+	{
+		for (j = 0; s2[j]; j++)
+			;
+	}
+	k = i + j + 1;
+	s = malloc(k * sizeof(char));
+	if (s == NULL)
+		return (NULL);
+	for (l = 0; l < i; l++)
+		s[l] = s1[l];
+	for (l = 0; l < j; l++)
+		s[l + i] = s2[l];
+	s[i + j] = '\0';
+	return (s);
 }
