@@ -1,11 +1,12 @@
-#include<stdio.h>
+#include <stdio.h>
+
 /**
- * main - main entry point
+ * main - prints the name of the file
  *
- * Return: name of the current program 
+ * Return: always 0
  */
 int main(void)
 {
-printf("%s\n", _FILE_);
-return (0);
+	printf("%s\n", __FILE__);
+	return (0);
 }
