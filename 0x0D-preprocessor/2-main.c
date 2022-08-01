@@ -1,5 +1,4 @@
 #define _FILE_
-#include "4-sum.h"
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
