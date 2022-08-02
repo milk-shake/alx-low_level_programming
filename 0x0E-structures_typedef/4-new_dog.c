@@ -9,7 +9,7 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	unsigned int i, n1, n2, n3;
+	unsigned int i, n1, n2;
 	dog_t *dog;
 
 	if (name == NULL || owner == NULL)
